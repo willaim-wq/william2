@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品-九大行星</title>
+
+<style>
+    html,body{
+        height: 100%;
+        overflow: hidden;
+    }
+    #universe{
+        background: repeating-radial-gradient(#555,#000000);
+    }
+    @keyframes starFlash {
+        from{opacity: 1;}
+        to{opacity: 0.3;}
+    }
+    #stars{
+        height: 100%;
+        background-image: url("images/stars.png");
+        background-size: cover;
+            animation: starFlash 3s infinite alternate;
+    }
+    @keyframes sunLight {
+        from{box-shadow: 0 0 45px #f5c91a;}
+        to{box-shadow: 0 0 90px #f5c91a;}
+    }
+    #sun{
+        width: 150px;
+        height: 150px;
+        background: radial-gradient(#f5c313,#ec7e08);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -75px 0px 0px -75px;
+        border-radius: 100px;
+        box-shadow: 0 0 45px #f5c91a;
+            animation: sunLight 3s infinite alternate; 
+    }
+    @keyframes spin{
+        from{transform: rotate(0)}
+        to{transform: rotate(360deg);}
+    }
+    #a1Orbit{
+        height: 180px;
+        width: 180px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -90px 0px 0px -90px;
+        /* border: 1px solid red; */
+        border-radius: 100%;
+            animation: spin 3s linear infinite;
+    }
+    #a1{
+        position: absolute;
+        top:50%;
+        margin: -15px 0px 0px -15px;
+            animation: spin 10s linear infinite;
+    }
+    #a2Orbit{
+        height: 250px;
+        width: 250px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -125px 0px 0px -125px;
+        /* border: 1px solid red; */
+        border-radius: 100%;
+            animation: spin 5s linear infinite;
+    }
+    #a2{
+        position: absolute;
+        top:50%;
+        margin: -20px 0px 0px -20px;
+            animation: spin 10s linear infinite;
+    }
+    #a3Orbit{
+        height: 410px;
+        width: 410px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -205px 0px 0px -205px;
+        /* border: 1px solid red; */
+        border-radius: 100%;
+            animation: spin 6s linear infinite;
+    }
+    #a3{
+        position: absolute;
+        top:50%;
+        margin: -35px 0px 0px -35px;
+            animation: spin 10s linear infinite;
+    }
+    #earthOrbit{
+        height: 340px;
+        width: 340px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -170px 0px 0px -170px;
+        /* border: 1px solid red; */
+        border-radius: 100%;
+            animation: spin 12s linear infinite;
+    }
+    #earth{
+        position: absolute;
+        top:50%;
+        margin: -35px 0px 0px -35px;
+            animation: spin 20s linear infinite;
+    }
+    #a5Orbit{
+        height: 400px;
+        width: 400px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -200px 0px 0px -200px;
+        /* border: 1px solid red; */
+        border-radius: 100%;
+            animation: spin 35s linear infinite;
+    }
+    #a5{
+        position: absolute;
+        top:50%;
+        margin: -150px 0px 0px -150px;
+            animation: spin 15s linear infinite;
+    }
+    #a6Orbit{
+        height: 550px;
+        width: 550px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -275px 0px 0px -275px;
+        /* border: 1px solid red; */
+        border-radius: 100%;
+            animation: spin 23s linear infinite;
+    }
+    #a6{
+        position: absolute;
+        top:50%;
+        margin: -200px 0px 0px -200px;
+            animation: spin 15s linear infinite;
+    }
+    #a7Orbit{
+        height: 620px;
+        width: 620px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -310px 0px 0px -310px;
+        /* border: 1px solid red; */
+        border-radius: 100%;
+            animation: spin 20s linear infinite;
+    }
+    #a7{
+        position: absolute;
+        top:50%;
+        margin: -230px 0px 0px -230px;
+            animation: spin 15s linear infinite;
+    }
+    #a8Orbit{
+        height: 700px;
+        width: 700px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -350px 0px 0px -350px;
+        /* border: 1px solid red; */
+        border-radius: 100%;
+            animation: spin 18s linear infinite;
+    }
+    #a8{
+        position: absolute;
+        top:50%;
+        margin: -250px 0px 0px -250px;
+            animation: spin 15s linear infinite;
+    }
+</style>
+</head>
+<body id="universe">
+    <div id="stars"></div>
+    <div id="sun"></div>
+    <div id="a1Orbit">
+        <div id="a1"><img src="images/1-1.png" width="30px" height="30px" alt=""></div>
+    </div>
+    <div id="a2Orbit">
+        <div id="a2"><img src="images/2-1.png" width="40px" height="40px"></div>
+    </div>
+    <div id="a3Orbit">
+        <div id="a3"><img src="images/4-1.png" width="40px" height="40px"></div>
+    </div>
+    <div id="earthOrbit">
+        <img id="earth" src="images/earth.png" alt="earth" width="60px" height="60px">
+    </div>
+    <div id="a5Orbit">
+        <div id="a5"><img src="images/5-1.png" width="120px" height="120px" alt=""></div>
+    </div>
+    <div id="a6Orbit">
+        <div id="a6"><img src="images/6-1.png" width="180px" height="100px" alt=""></div>
+    </div>
+    <div id="a7Orbit">
+        <div id="a7"><img src="images/7-1.png" width="90px" height="90px" alt=""></div>
+    </div>
+    <div id="a8Orbit">
+        <div id="a8"><img src="images/8-1.png" width="80px" height="80px" alt=""></div>
+    </div>
+</body>
+</html>
